@@ -1,0 +1,108 @@
+{% args lr %}
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/img/favicon-16x16.png">
+    <link rel="manifest" href="/public/site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <title>Benq pico</title>
+    <link rel="stylesheet" href="/public/css/styles.css">
+    <script>
+        window.LR = {% if lr %}true{% else %}false{% endif %};
+    </script>
+</head>
+<body class="loading">
+<div class="indicator"></div>
+<header>
+    <button data-command="pow" data-command-type="custom" disabled>
+        <span>power_settings_new</span>
+    </button>
+    <div class="logo">
+        <span>Benq</span>
+        <span>pico</span>
+    </div>
+    <button data-command="mute" data-command-type="onoff" disabled>
+        <span>volume_off</span>
+    </button>
+</header>
+<main>
+    <section class="source">
+        <div class="grid">
+            <button data-command="sour" data-value="hdmi" data-command-type="oneof" disabled>
+                <span>live_tv</span>
+            </button>
+            <button data-command="sour" data-value="hdmi2" data-command-type="oneof" disabled>
+                <span>stadia_controller</span>
+            </button>
+            <button data-command="sour" data-value="vga" data-command-type="oneof" disabled>
+                <span>computer</span>
+            </button>
+            <button data-command="sour" data-value="svid" data-command-type="oneof" disabled>
+                <span>settings_input_svideo</span>
+            </button>
+        </div>
+    </section>
+    <section class="cross">
+        <div class="grid">
+            <button data-command="menu" data-command-type="trigger" disabled>
+                <span>menu</span>
+            </button>
+            <button data-command="up" data-command-type="trigger" disabled>
+                <span>arrow_upward</span>
+            </button>
+            <button data-command="vol" data-value="+" data-command-type="trigger" disabled>
+                <span>volume_up</span>
+            </button>
+
+            <button data-command="left" data-command-type="trigger" disabled>
+                <span>arrow_left_alt</span>
+            </button>
+            <button data-command="enter" data-command-type="trigger" disabled>
+                <span>subdirectory_arrow_left</span>
+            </button>
+            <button data-command="right" data-command-type="trigger" disabled>
+                <span>arrow_right_alt</span>
+            </button>
+
+            <button data-command="refresh" data-command-type="custom">
+                <span>autorenew</span>
+            </button>
+            <button data-command="down" data-command-type="trigger" disabled>
+                <span>arrow_downward_alt</span>
+            </button>
+            <button data-command="vol" data-value="-" data-command-type="trigger" disabled>
+                <span>volume_down</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="misc">
+        <div class="grid">
+            <button data-command="tp" data-command-type="trigger" disabled>
+                <span>grid_on</span>
+            </button>
+            <button data-command="lampm" data-value="lnor" data-command-type="oneof" disabled>
+                <span>emoji_objects</span>
+                <sub>normal</sub>
+            </button>
+            <button data-command="lampm" data-value="eco" data-command-type="oneof" disabled>
+                <span>emoji_objects</span>
+                <sub>eco</sub>
+            </button>
+            <button data-command="lampm" data-value="seco" data-command-type="oneof" disabled>
+                <span>emoji_objects</span>
+                <sub>smart</sub>
+            </button>
+        </div>
+    </section>
+</main>
+<footer>
+    with love to <span class="rp"></span> by majo44
+</footer>
+<script src="/public/js/index.js" type="module" defer></script>
+</body>
+</html>

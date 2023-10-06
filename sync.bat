@@ -1,0 +1,1 @@
+mpbridge dev COM5 .  --no-prompt --auto-reset=soft

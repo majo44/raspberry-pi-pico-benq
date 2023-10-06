@@ -1,0 +1,7 @@
+.git/
+.idea/
+.stubs/
+.gitignore
+docs
+sync.bat
+README.md
